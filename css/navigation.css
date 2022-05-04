@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.navbar {
+    background-color: rgba(28, 45, 146, 255);
+    display: flex;
+    float: left;
+    height: 100vh;
+    width: 150px;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.flex {
+    display: flex;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.navbar-links a {
+    color: rgba(187, 189, 205, 255);
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    /* noch Ändern! */
+    transition: all ease-in-out 255ms;
+}
+
+.navbar-links a:hover {
+    color: rgba(245, 246, 250, 255);
+    transform: scale(1.01);
+}
+
+.user {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: 100px;
+    left: 50px;
+}
+
+.user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+@media (max-width: 750px) {
+    .tasksDiv {
+        flex-direction: column;
+    }
+    .section {
+        width: unset;
+    }
+}
+
+@media (max-width: 580px) {
+    body {
+        overflow-x: hidden;
+        flex-direction: column;
+    }
+    .flex {
+        flex-direction: column;
+    }
+    .navbar {
+        height: 16vh !important;
+        width: 100vw !important;
+        flex-direction: row !important;
+        padding: 6px !important;
+    }
+    .navbar-links {
+        width: 70%;
+        display: flex;
+    }
+
+    .navbar-links-unten {
+        display: none !important;
+    }
+
+    .navbar-links a {
+        margin-bottom: unset !important;
+        padding-left: unset !important;
+    }
+    .links {
+        /* display: flex; */
+        flex-direction: row !important;
+        text-align: unset !important;
+        align-items: center !important;
+        justify-content: space-evenly !important;
+        width: 100%;
+    }
+    .user {
+        display: flex;
+        position: unset !important;
+        align-items: center;
+        justify-content: center;
+        width: 71px;
+    }
+}
+
+@media (max-width: 530px) {
+    .user {
+        display: none !important;
+    }
+    .navbar-links {
+        width: 70%;
+    }
+}
+
+.navbar-links-unten {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.navbar-links-unten a {
+    color: rgba(187, 189, 205, 255);
+    text-decoration: none;
+    padding-left: 30px;
+}
+
+.navbar-links-unten a:hover {
+    color: rgba(245, 246, 250, 255);
+}

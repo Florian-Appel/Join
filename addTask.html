@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/addTask.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="js/mini_backend.js"></script>
+    <script src="js/addTask.js"></script>
+    <script src="js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Add Task</title>
+</head>
+
+<body onload="includeHTML();loadTasks();pushDate()">
+    <div class="flex widthMax">
+        <div w3-include-html="template/navigation.html"></div>
+        <div class="contentDiv">
+            <h2>Add Task</h2>
+            <h5>Learning Management System Project</h5>
+
+            <div class="lightBlue formDiv">
+
+                <form target="_self" action="/backlog.html" id="myForm" onsubmit="addTask()">
+
+                    <div class="tasksDiv">
+                        <div class="section">
+                            <div>
+                                <span class="taskName">TITLE</span>
+                            </div>
+                            <div>
+                                <input id="title" required placeholder="Title">
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div>
+                                <span class="taskName">DUE DATE</span>
+                            </div>
+                            <div>
+                                <td><input id="duedate" required type="date" value="2022-01-14"></td>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div>
+                                <span class="taskName">CATEGORY</span>
+                            </div>
+                            <div>
+                                <select required name="CATEGORY" id="category">
+                                    <option value="Management">Management</option>
+                                    <option value="IT">IT</option>
+                                    <option value="IT-Hardware">IT-Hardware</option>
+                                    <option value="Maintenance">Maintenance</option>
+                                    <option value="Facility Utility">Facility Utility</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div>
+                                <span class="taskName">URGENCY</span>
+                            </div>
+                            <div>
+                                <select name="URGENCY" id="urgency">
+                                    <option value="low">Low</option>
+                                    <option value="middle">Middle</option>
+                                    <option value="high">High</option>
+                                    <option value="criticle">Criticle</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div>
+                                <span class="taskName">DESCRIPTION</span>
+                            </div>
+                            <div>
+                                <textarea required id="description" placeholder="Description"></textarea>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div>
+                                <span class="taskName">ASSIGNED TO</span>
+                            </div>
+
+                            <div class="userAssigned">
+                                <div class="userAssigned" id="selectedUserImages">
+                                </div>
+                                <div>
+                                    <div class="assignedTo">
+                                        <input class="height0" required id="checkUser" type="text">
+                                        <img class="userImg" src="img/icon plus.png" onclick="showSelectionList()" alt="">
+                                        <div id="selectUser" class="userList dNone"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="createOrCancel">
+                                <button class="cancel" onclick="clearForm()">CANCEL</button>
+                                <button class="create">CREATE TASK</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div w3-include-html="template/footer.html"></div>
+</body>
+
+</html>

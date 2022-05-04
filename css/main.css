@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.darkblue{
+    color: rgb(30,49,144);
+}
+.blue{
+    color:rgb(102,115,180);
+}
+.background__darkblue{
+    background-color: rgb(30,49,144);
+}
+.background__lightblue{
+  background-color:    rgb(244,243,251);
+}
+
+h2{
+    margin-bottom: 0;
+}
+h3{
+    margin-bottom: 0.8em;
+}

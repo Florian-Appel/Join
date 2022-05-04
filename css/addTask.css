@@ -1,0 +1,264 @@
+body {
+    display: flex;
+}
+
+td {
+    padding: 6px 16px 8px 16px;
+    position: relative;
+    width: 50%;
+}
+
+form {
+    width: 100%;
+}
+
+.divform {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+input {
+    font-family: 'PT Sans', sans-serif;
+    height: 32px;
+    border-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    width: 100%;
+    padding-left: 6px;
+    box-sizing: border-box;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+[type="date"] {
+    background: #fff url(../img/icons8-calendar-150.png) 97% 50% no-repeat;
+    background-size: 21px;
+}
+
+[type="date"] {
+    cursor: pointer;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+textarea {
+    font-family: 'PT Sans', sans-serif;
+    height: 120px;
+    border-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    width: 100%;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+select {
+    font-family: 'PT Sans', sans-serif;
+    height: 32px;
+    border-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    width: 100%;
+    appearance: none;
+    background-image: url(../img/chevron\ .png);
+    background-position: 97%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-left: 6px;
+    box-sizing: border-box;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+}
+
+.taskName {
+    color: rgb(30, 49, 144);
+    font-weight: bold;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+h5 {
+    color: rgb(30, 49, 144);
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.contentDiv {
+    width: 100% !important;
+    margin: 8px;
+}
+
+.lightBlue {
+    background-color: rgb(244, 243, 251);
+}
+
+.darkBlue {
+    background-color: rgb(30, 49, 144);
+}
+
+.formDiv {
+    border-style: none;
+    border-radius: 20px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userImg {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.userAssigned {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row-reverse;
+}
+
+.addUser {
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.createOrCancel {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.createOrCancel button {
+    margin-right: 12px;
+    padding: 12px;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cancel {
+    background-color: transparent;
+    color: rgb(30, 49, 144);
+}
+
+.create {
+    background-color: rgb(30, 49, 144);
+    color: white;
+}
+
+.userList {
+    background-color: white;
+    width: 150px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: absolute;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(230, 230, 230);
+    height: 100px;
+    overflow-y: auto;
+    height: 0;
+    transition: all ease-in-out 100ms;
+}
+
+.userList input {
+    height: 20px;
+}
+
+.userList div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.userList label {
+    width: 100%;
+}
+
+.userList li {
+    cursor: pointer;
+}
+
+.userList li:hover {
+    color: rgb(30, 49, 144);
+}
+
+.assignedTo {
+    position: relative;
+}
+
+.dNone {
+    display: none;
+}
+
+.height0 {
+    height: 0;
+    opacity: 0;
+    width: 0;
+    position: absolute;
+}
+
+.section {
+    width: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+
+.tasksDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 750px) {
+    .widthMax {
+        width: -webkit-fill-available;
+    }
+
+    .tasksDiv {
+        flex-direction: column;
+    }
+
+    .section {
+        width: unset;
+    }
+
+    .createOrCancel {
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="/js/main.js"></script>
+    <title>Document</title>
+    <style>
+        .impressum-inhalt {
+            display: flex;
+            flex-direction: column;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+
+<body onload="includeHTML()">
+
+    <div w3-include-html="template/navigation.html"></div>
+
+    <div class="impressum-inhalt">
+        <h1>Impressum</h1>
+
+        <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+        <p>Florian Appel<br /> Musterstraße 1<br /> 12345 Musterstadt</p>
+
+        <p>Marvin Wimers<br /> Musterstraße 1<br /> 12345 Musterstadt</p>
+
+        <p>Dominic Gerth<br /> Wunstorfer Landstr. 40<br /> 30453 Hannover</p>
+
+        <h2>Kontakt</h2>
+        <p>Telefon: &#91;0157/77592288&#93;<br /> E-Mail: d.gerth1990@googlemail.com</p>
+
+        <p>Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
+
+    </div>
+    <div w3-include-html="template/footer.html"></div>
+</body>
+
+</html>

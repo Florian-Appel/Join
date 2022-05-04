@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="./css/help.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/main.js"></script>
+    <script src="./js/help.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <title>Help</title>
+</head>
+
+<body onload="includeHTML()">
+
+    <div class="help">
+        <div w3-include-html="template/navigation.html"></div>
+        <div class="sections">
+
+            <h1>Help</h1>
+            <div class="sectionHelp">
+                <div id="divHead" class="divHead" onclick="showSection('1')">
+                    <span>Add Task</span>
+                    <img id="chevron1" class="chevron" src="./img/chevron .png" alt="">
+                </div>
+                <div id="description1" class="description dNone">
+                    <img src="./img/HelpAddTask.png" alt="addTask">
+                    <span>
+                        To create a new task, please give it a title, due date, category, urgency and a description.
+                        at last click on the + button to assign your task to someone. By clicking on "create task"
+                        your task will be created and the backlog will be opened.
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="sectionHelp">
+                <div id="divHead" class="divHead" onclick="showSection('3')">
+                    <span>Backlog - filled</span>
+                    <img id="chevron3" class="chevron" src="./img/chevron .png" alt="">
+                </div>
+                <div id="description3" class="description dNone">
+                    <img src="./img/backlog__full.png" alt="placeholder">
+                    <span> The backlog looks like the image on the left if it is filled with tasks. You can no take the
+                        option
+                        to send it to the board or delete it.
+                    </span>
+                </div>
+            </div>
+
+
+
+            <div class="sectionHelp">
+                <div id="divHead" class="divHead" onclick="showSection('2')">
+                    <span>Backlog - empty</span>
+                    <img id="chevron2" class="chevron" src="./img/chevron .png" alt="">
+                </div>
+                <div id="description2" class="description dNone">
+                    <img src="./img/backlog__empty.png" alt="placeholder">
+                    <span> The backlog looks like the image on the left if there is no task added to backlog or all task
+                        have been updated to the board. </span>
+                </div>
+            </div>
+
+            <div class="sectionHelp">
+                <div id="divHead" class="divHead" onclick="showSection('4')">
+                    <span>Board</span>
+                    <img id="chevron4" class="chevron" src="./img/chevron .png" alt="">
+                </div>
+                <div id="description4" class="description dNone">
+                    <img src="./img/board-help.png" alt="placeholder">
+                    <span>
+                        In the board you can see the tasks that have been added from the backlog.
+                        You can simply drag them into the desired column.
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+    <div w3-include-html="template/footer.html"></div>
+</body>
